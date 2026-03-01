@@ -1,5 +1,5 @@
 # PrivaPulse
-A sovereign wellness engine built on Monad. Uses EZKL (ZKML) for private stress-recovery verification and the Unlink SDK for shielded, non-traceable health rewards ($PRP). 🧬🛡️ #ShipPrivateShipFast
+PrivaPulse is an autonomous, privacy-first agent that transforms real-time biometric wellness into shielded rewards on Monad by using EZKL proofs to navigate the X402 protocol without ever compromising user identity. 🧬🛡️ #ShipPrivateShipFast
 
 ⚡ Why Monad?
 Health interventions require immediate feedback. We utilized Monad’s parallelized EVM execution to:
