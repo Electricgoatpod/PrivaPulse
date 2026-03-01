@@ -1,0 +1,29 @@
+.shadow-dashboard {
+  margin-top: 1rem;
+}
+
+.shadow-dashboard__terminal {
+  margin-top: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.shadow-dashboard__line {
+  color: rgba(200, 220, 255, 0.9);
+  word-break: break-word;
+}
+
+.shadow-dashboard__line + .shadow-dashboard__line {
+  margin-top: 0.25rem;
+}
+
+.shadow-dashboard__line--muted {
+  color: rgba(255, 255, 255, 0.45);
+}

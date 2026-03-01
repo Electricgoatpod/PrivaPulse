@@ -1,0 +1,242 @@
+/* Private Assets — Unlink wallet-style component */
+
+.private-assets {
+  margin-top: 1.25rem;
+  padding: clamp(1.25rem, 4vw, 1.5rem);
+}
+
+.private-assets__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Stealth Mode toggle */
+.stealth-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.stealth-toggle__label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.stealth-toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.stealth-toggle__track {
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.stealth-toggle__track::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  transition: transform 0.2s ease;
+}
+
+.stealth-toggle__input:checked + .stealth-toggle__track {
+  background: rgba(160, 5, 93, 0.35);
+  border-color: rgba(160, 5, 93, 0.5);
+}
+
+.stealth-toggle__input:checked + .stealth-toggle__track::after {
+  transform: translateX(18px);
+}
+
+/* Shielded balance with shimmer on the number */
+.private-assets__balance {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.private-assets__balance-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.private-assets__balance-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.private-assets__balance-note {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-style: italic;
+}
+
+.shimmer-wrap {
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.6) 25%,
+    rgba(255, 220, 240, 0.9) 50%,
+    rgba(255, 255, 255, 0.6) 75%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 100% 0; }
+  50% { background-position: 0% 0; }
+}
+
+/* Wallet row: address + status icon */
+.private-assets__wallet {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+.private-assets__wallet-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  min-width: 3.5rem;
+}
+
+.private-assets__wallet-address {
+  font-family: ui-monospace, monospace;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  transition: filter 0.25s ease;
+}
+
+.private-assets__wallet-address--blur {
+  filter: blur(6px);
+  user-select: none;
+  pointer-events: none;
+}
+
+.private-assets__status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(100, 220, 140, 0.25);
+  color: #86efac;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.private-assets__status--shield {
+  background: rgba(100, 180, 255, 0.3);
+  color: #93c5fd;
+}
+
+/* Unlinkability Log */
+.unlinkability-log {
+  margin-top: 0.5rem;
+}
+
+.unlinkability-log .label {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.unlinkability-log__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.unlinkability-log__item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 0.2rem 0.75rem;
+  padding: 0.65rem 0.85rem;
+  background: rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.8rem;
+}
+
+.unlinkability-log__item:last-child {
+  border-bottom: none;
+}
+
+.unlinkability-log__amount {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.unlinkability-log__amount--credit {
+  color: #86efac;
+}
+
+.unlinkability-log__amount--debit {
+  color: #fca5a5;
+}
+
+.unlinkability-log__item--empty {
+  grid-template-rows: auto;
+}
+.unlinkability-log__item--empty .unlinkability-log__amount {
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 500;
+}
+
+.unlinkability-log__source {
+  grid-column: 1 / -1;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+}
+
+.unlinkability-log__time {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.7rem;
+  align-self: center;
+}
+
+@media (max-width: 380px) {
+  .private-assets {
+    padding: 1rem;
+  }
+  .private-assets__balance-value {
+    font-size: 1.35rem;
+  }
+}
