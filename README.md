@@ -1,6 +1,10 @@
 # PrivaPulse
 
-PrivaPulse is an autonomous, privacy-first agent that transforms real-time biometric wellness into shielded rewards on Monad by using EZKL proofs to navigate the X402 protocol without ever compromising user identity. 🧬🛡️ #ShipPrivateShipFast
+PrivaPulse is an autonomous, privacy-first agent that transforms real-time biometric wellness into shielded rewards on Monad by using EZKL proofs to navigate the X402 protocol without ever compromising user identity. 
+
+PrivaPulse monitors biometric stability. When a user achieves 'Zen' (verified via EZKL), the Agent autonomously claims a $PRP reward. If the server challenges the claim with an X402 error, the Agent resolves it using a shielded Unlink vault.
+
+🧬🛡️ #ShipPrivateShipFast
 
 ## ⚡ Why Monad?
 
@@ -14,6 +18,16 @@ Health interventions require immediate feedback. We utilized Monad's parallelize
 
 In the "Stress Diagnose-Meditate (SDM)" Framework, every reward payout creates a public "on-chain fingerprint" that links a specific biometric event (like a stress spike) to a user's public wallet address. Over time, this allows third parties to de-anonymize a user's medical history simply by tracking reward transactions. We used Unlink to 'un-link' the health event from the financial reward. It turns a public medical record into a private wellness incentive.
 
+## Technical Stack Highlights
+
+1. Blockchain: Monad (High-performance execution).
+
+2. Payment Protocol: X402 (Standardized agent-to-server payments).
+
+3. Privacy: Unlink SDK (Shielded, non-custodial payouts).
+
+4. ZK-Proofs: EZKL (Verifying biometric "Zen" states without revealing raw data).
+   
 ## 🎨 Features
 
 - **Apple Health Simulation:** Mimics iOS 17 health permissions and real-time HRV monitoring.
