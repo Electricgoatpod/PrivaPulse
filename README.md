@@ -6,7 +6,7 @@ PrivaPulse is a biometric AI agent that pays you for managing stress—without e
 
 **The Innovation:** We prove your biological recovery happened WITHOUT revealing your heart rate, stress levels, or identity.
 
-🧬 zkML Verification (EZKL) → ⚡ Instant Payout (Monad) → 🛡️ Private Transfer (Unlink)
+🧬 zkML Verification (EZKL) → ⚡ Instant Payout (EVM) → 🛡️ Private Transfer (Unlink)
 
 **Built for the X402 Agent Track**  
 [🎥 Watch 4-Min Demo](#) | [🚀 Try Live App](https://privapulse.app) | [📊 View Pitch Deck](#)
